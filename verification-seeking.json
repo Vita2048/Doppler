@@ -1,0 +1,22 @@
+{
+  "introduction": "Why does a passing sound change pitch?",
+  "restFrequency": "440 Hz",
+  "toneStart": 8,
+  "synchronizedFrequency": true,
+  "backwardSeekIdentical": true,
+  "flybyChanges": true,
+  "historySeekIdentical": true,
+  "historyReveals": true,
+  "media": [
+    {
+      "id": "voice",
+      "duration": 27.384,
+      "volume": 1
+    },
+    {
+      "id": "tone",
+      "duration": 10,
+      "volume": 0.25
+    }
+  ]
+}

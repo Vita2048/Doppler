@@ -1,0 +1,4 @@
+1
+00:00:00,050 --> 00:00:04,787
+As the source approaches, crests crowd together, so the microphone hears a higher pitch.
+

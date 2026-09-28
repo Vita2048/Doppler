@@ -1,0 +1,4 @@
+1
+00:00:00,050 --> 00:00:03,312
+This curve traces the changing frequency you just heard.
+

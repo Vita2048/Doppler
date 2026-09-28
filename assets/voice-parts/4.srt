@@ -1,0 +1,8 @@
+1
+00:00:00,050 --> 00:00:01,811
+That shift is the Doppler effect.
+
+2
+00:00:01,811 --> 00:00:05,699
+The source keeps the same note; motion changes how often crests arrive.
+

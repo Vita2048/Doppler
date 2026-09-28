@@ -1,0 +1,11 @@
+This video explains the Doppler effect — why a passing sound changes pitch.
+
+At rest, the microphone hears the source’s own frequency.
+
+As the source approaches, crests crowd together, so the microphone hears a higher pitch.
+
+After passing, crests stretch apart, and the pitch drops.
+
+That shift is the Doppler effect. The source keeps the same note; motion changes how often crests arrive.
+
+This curve traces the changing frequency you just heard.

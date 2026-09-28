@@ -1,0 +1,10 @@
+{
+  "duration": 30,
+  "assertions": [
+    { "kind": "appearsBy", "selector": ".heading", "bySec": 0.5 },
+    { "kind": "staysInFrame", "selector": ".panelRow" },
+    { "kind": "staysInFrame", "selector": "#subtitle" },
+    { "kind": "appearsBy", "selector": ".historyPanel", "bySec": 25 },
+    { "kind": "appearsBy", "selector": ".card", "bySec": 29 }
+  ]
+}

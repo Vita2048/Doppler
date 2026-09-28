@@ -1,0 +1,4 @@
+1
+00:00:00,050 --> 00:00:03,270
+At rest, the microphone hears the source’s own frequency.
+
