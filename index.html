@@ -136,10 +136,11 @@ update(0);
  const tracks=[{el:voice,start:0},{el:tone,start:8}];
  let syncTimer=null;
  function audit(t,playing){for(const tr of tracks){const want=t-tr.start; if(!isFinite(tr.el.duration)||want<0||want>=tr.el.duration){tr.el.pause();continue;} if(Math.abs(tr.el.currentTime-want)>0.35){try{tr.el.currentTime=Math.max(0,want);}catch(e){}} if(playing&&tr.el.paused){tr.el.play().catch(function(){});}}}
- function play(){if(tl.time()>=30){tl.pause(0);}for(const tr of tracks){const want=tl.time()-tr.start; if(isFinite(tr.el.duration)&&want>=0&&want<tr.el.duration){try{tr.el.currentTime=Math.max(0,want);}catch(e){} tr.el.play().catch(function(){});}} tl.play();btn.textContent='Pause'; if(syncTimer){clearInterval(syncTimer);} syncTimer=setInterval(function(){audit(tl.time(),!tl.paused());},300);}
- function pause(){tl.pause();for(const tr of tracks){tr.el.pause();} btn.textContent=tl.time()>=30?'Replay':'Play'; if(syncTimer){clearInterval(syncTimer);syncTimer=null;}}
+ function play(){if(tl.time()>=30){tl.pause(0);}for(const tr of tracks){const want=tl.time()-tr.start; if(isFinite(tr.el.duration)&&want>=0&&want<tr.el.duration){try{tr.el.currentTime=Math.max(0,want);}catch(e){} tr.el.play().catch(function(){});}} tl.play();btn.textContent='Pause';btn.style.display='none'; if(syncTimer){clearInterval(syncTimer);} syncTimer=setInterval(function(){audit(tl.time(),!tl.paused());},300);}
+ function pause(){tl.pause();for(const tr of tracks){tr.el.pause();} btn.style.display='';btn.textContent=tl.time()>=30?'Replay':'Play'; if(syncTimer){clearInterval(syncTimer);syncTimer=null;}}
  tl.eventCallback('onComplete',function(){pause();});
  btn.addEventListener('click',function(){if(tl.paused()){play();}else{pause();}});
+ document.getElementById('root').addEventListener('click',function(e){if(e.target.closest&&e.target.closest('#playWrap')){return;} if(!tl.paused()){pause();}});
  // Clip visibility for standalone playback. In Studio the runtime hides inactive
  // timed clips; on Pages there is no runtime, and the opaque end card would
  // otherwise cover every earlier beat from the first frame.
